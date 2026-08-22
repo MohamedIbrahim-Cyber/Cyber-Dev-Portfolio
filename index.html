@@ -16,13 +16,15 @@
 
 <body class="page-container">
     <header>
-        <nav class="nav-pill">
+<nav class="nav-pill">
             <a href="#" class="nav-brand">
                 <span class="nav-logo">
                     <img src="../Photos/icon1.png" alt="Logo">
                 </span>
                 <span class="nav-title">CyberDev</span>
             </a>
+
+            <!-- Desktop Links -->
             <div class="nav-links">
                 <a href="#About">About</a>
                 <a href="#Projects">Projects</a>
@@ -30,16 +32,36 @@
                 <a href="#Services">Services</a>
                 <a href="#Contact">Contact</a>
             </div>
+
             <div class="nav-actions">
-            <button id="theme-btn" class="btn-icon" aria-label="Toggle Theme">
-                <!--Sun icon-->
-                <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
-                <!--Moon icon-->
-                <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-            </button>
-            <a href="../assets/CV.pdf" download class="btn-accent btn-sm hide-mobile">Download CV</a>
+                <!-- Theme Toggle Button -->
+                <button id="theme-btn" class="btn-icon" aria-label="Toggle Theme">
+                    <!-- Sun icon -->
+                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                    <!-- Moon icon -->
+                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 0 1 1-9-9Z"/></svg>
+                </button>
+
+                <!-- Desktop CV Button -->
+                <a href="../assets/CV.pdf" download class="btn-accent btn-sm hide-mobile">Download CV</a>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="mobile-menu-btn" class="btn-icon mobile-only" aria-label="Open Navigation Menu">
+                    <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                    <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </button>
             </div>
         </nav>
+
+        <!-- Mobile Dropdown Drawer -->
+        <div id="mobile-drawer" class="mobile-drawer surface">
+            <a href="#About" class="mobile-nav-link">About</a>
+            <a href="#Projects" class="mobile-nav-link">Projects</a>
+            <a href="#Skills" class="mobile-nav-link">Skills</a>
+            <a href="#Services" class="mobile-nav-link">Services</a>
+            <a href="#Contact" class="mobile-nav-link">Contact</a>
+            <a href="../assets/CV.pdf" download class="btn-accent btn-full">Download CV</a>
+        </div>
     </header>
     <main class="main-content">
         <!--Hero Section-->
@@ -80,7 +102,6 @@
                     <div class="command-output">CyberDev . CS Student & Web Developer</div>
                         <span class="prompt-symbol">$</span>
                         <span>upTime</span>
-                    </div>
                     <div class="command-output">CyberDev . CS Student & Web Developer</div>
                     <div class="command-line">
                         <span class="prompt-symbol">$</span>
@@ -169,6 +190,8 @@
 
         </div>
         </section>
+        <section id="projects" class="section-container">
+
     </main>
     <footer>
 
