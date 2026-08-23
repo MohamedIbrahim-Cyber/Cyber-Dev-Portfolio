@@ -60,7 +60,7 @@ p {
 
 /* main classes */
 .font-mono { font-family: var(--font-mono); }
-.text-accent-inline, .text-highlight { color: var(--accent-bg); font-weight: 700; }
+.text-accent-inline, .text-highlight { color: var(--accent-bg); font-weight: 100; }
 .text-success { color: #22C55E; }
 
 .surface {
