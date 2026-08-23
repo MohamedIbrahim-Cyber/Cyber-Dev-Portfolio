@@ -618,6 +618,8 @@ p {
 }
 
 .project-card {
+  position: relative;
+  overflow: hidden;
   border-radius: 1.25rem;
   padding: 1.75rem;
   display: flex;
@@ -632,6 +634,62 @@ p {
   transform: translateY(-4px);
   border-color: var(--accent-bg);
   box-shadow: var(--shadow-hover);
+}
+
+/* Crisp Background Cover Project Card */
+.project-card-full {
+  min-height: 380px;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.project-bg-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.project-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.4s var(--ease-spring);
+}
+
+.project-card:hover .project-bg-img {
+  transform: scale(1.03);
+}
+
+/* Clean Gradient Scrim (No Blur, Transparent Top to Reveal Image) */
+.project-bg-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(22, 22, 22, 0.4) 0%,
+    rgba(22, 22, 22, 0) 30%,
+    rgba(22, 22, 22, 0.7) 70%,
+    rgba(22, 22, 22, 0.95) 100%
+  );
+}
+
+.project-card-full .project-top,
+.project-card-full .project-bottom {
+  position: relative;
+  z-index: 2;
+}
+
+.project-card-full .tag {
+  background-color: rgba(18, 18, 18, 0.85);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: var(--text-primary);
+}
+
+.project-card-full .icon-circle {
+  background-color: rgba(18, 18, 18, 0.85);
+  border-color: rgba(255, 255, 255, 0.18);
 }
 
 .project-top {
