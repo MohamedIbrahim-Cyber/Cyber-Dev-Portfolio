@@ -7,11 +7,10 @@
   <meta name="description" content="Personal engineering portfolio focusing on systems programming, web architectures, and hardware tinkering." />
   <link rel="stylesheet" href="style.css" />
   <script src="script.js"></script>
-  <link rel="icon" type="image/png" href="../Photos/icon1.png">
+  <link rel="icon" type="image/png" href="Photos/icon1.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
 </head>
 
 <body class="page-container">
@@ -19,7 +18,7 @@
         <nav class="nav-pill">
             <a href="#" class="nav-brand">
                 <span class="nav-logo">
-                    <img src="../Photos/icon1.png" alt="Logo">
+                    <img src="Photos/icon1.png" alt="Logo">
                 </span>
                 <span class="nav-title">CyberDev</span>
             </a>
@@ -71,11 +70,6 @@
         <section class="hero-grid">
             <!--Left Column:Header Text-->
             <div class="hero-text scroll-reveal slide-left">
-                <div class="status-pill">
-                    <span class="status-dot"></span>
-                    <span class="status-text">Available for projects & collaboration</span>
-                </div>
-
                 <h1 class="hero-title">Building websites, crafting interfaces and exploring the digital world.</h1>
                 <div class="hero-actions">
                     <a href="#Projects" class="btn-accent">Explore Work</a>
@@ -89,39 +83,41 @@
             </div>
             
             <!--Right Column: Terminal-->
-            <div class="terminal-card surface scroll-reveal slide-right delay-200">
-                <div class="terminal-header">
-                    <div class="window-dots">
-                        <span class="dot red-dot"></span>
-                        <span class="dot yellow-dot"></span>
-                        <span class="dot green-dot"></span>
+            <div class="scroll-reveal slide-right delay-200">
+                <div class="terminal-card surface">
+                    <div class="terminal-header">
+                        <div class="window-dots">
+                            <span class="dot red-dot"></span>
+                            <span class="dot yellow-dot"></span>
+                            <span class="dot green-dot"></span>
+                        </div>
+                        <span class="terminal-title">Status.sh</span>
                     </div>
-                    <span class="terminal-title">Status.sh</span>
-                </div>
-                <div class="terminal-body">
-                    <div class="command-line">
-                        <span class="prompt-symbol">$</span>
-                        <span>whoAmI</span>
-                    </div>
-                    <div class="command-output">CyberDev . CS Student & Web Developer</div>
-                    <div class="command-line">
-                        <span class="prompt-symbol">$</span>
-                        <span>upTime</span>
-                    </div>
-                    <div class="command-output">CyberDev . CS Student & Web Developer</div>
-                    <div class="command-line">
-                        <span class="prompt-symbol">$</span>
-                        <span>cat current_focus.json</span>
-                    </div>
-                    <div class="command-output json-block">
-                        <span>{</span>
-                        <div class="json-indent">"core": ["Web Architecture", "UI Systems"],</div>
-                        <div class="json-indent">"tools": ["HTML5", "CSS Grid", "JS ES6+", "Figma"]</div>
-                        <span>}</span>
-                    </div>
-                    <div class="command-line">
-                        <span class="prompt-symbol">$</span>
-                        <span class="cursor-blink"></span>
+                    <div class="terminal-body">
+                        <div class="command-line">
+                            <span class="prompt-symbol">$</span>
+                            <span>whoAmI</span>
+                        </div>
+                        <div class="command-output">CyberDev . CS Student & Web Developer</div>
+                        <div class="command-line">
+                            <span class="prompt-symbol">$</span>
+                            <span>upTime</span>
+                        </div>
+                        <div class="command-output">CyberDev . CS Student & Web Developer</div>
+                        <div class="command-line">
+                            <span class="prompt-symbol">$</span>
+                            <span>cat current_focus.json</span>
+                        </div>
+                        <div class="command-output json-block">
+                            <span>{</span>
+                            <div class="json-indent">"core": ["Web Architecture", "UI Systems"],</div>
+                            <div class="json-indent">"tools": ["HTML5", "CSS Grid", "JS ES6+", "Figma"]</div>
+                            <span>}</span>
+                        </div>
+                        <div class="command-line">
+                            <span class="prompt-symbol">$</span>
+                            <span class="cursor-blink"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -161,14 +157,14 @@
                             <span class="stat-label"></span>
                         </div>
                         <div class="photo-card photo-tall surface">
-                            <img src="../Photos/shadow-card.png" alt="Profile tall">
+                            <img src="Photos/shadow-card.png" alt="Profile tall">
                         </div>
                     </div>
 
                     <!-- Mosaic Column 2 -->
                     <div class="mosaic-col">
                         <div class="photo-card photo-wide surface">
-                            <img src="../Photos/sun-card.jpg" alt="Campus wide">
+                            <img src="Photos/sun-card.jpg" alt="Campus wide">
                         </div>
                         <div class="stat-card stat-card-accent stat-mini">
                             <span class="stat-number"></span>
@@ -210,7 +206,7 @@
                 <article class="surface project-card project-card-full col-span-2">
                     <!-- Background Cover Image & Scrim -->
                     <div class="project-bg-layer">
-                        <img src="../Photos/course-organiser-dashboard.png" alt="Course Organizer Preview" class="project-bg-img">
+                        <img src="Photos/course-organiser-dashboard.png" alt="Course Organizer Preview" class="project-bg-img">
                         <div class="project-bg-scrim"></div>
                     </div>
 

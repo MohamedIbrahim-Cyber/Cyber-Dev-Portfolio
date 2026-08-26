@@ -31,8 +31,21 @@ function initMobileNav() {
 
     if (!menuBtn || !drawer) return;
 
-    menuBtn.addEventListener("click", () => {
+    menuBtn.setAttribute("aria-expanded", "false");
+
+    const closeDrawer = () => {
+        drawer.classList.remove("is-open");
+        menuBtn.setAttribute("aria-expanded", "false");
+        if (iconMenu && iconClose) {
+            iconMenu.style.display = "block";
+            iconClose.style.display = "none";
+        }
+    };
+
+    menuBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
         const isOpen = drawer.classList.toggle("is-open");
+        menuBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
         
         // Swap hamburger and close (X) icons
         if (iconMenu && iconClose) {
@@ -43,12 +56,21 @@ function initMobileNav() {
 
     // Close the drawer automatically when any link is tapped
     mobileLinks.forEach(link => {
-        link.addEventListener("click", () => {
-            drawer.classList.remove("is-open");
-            if (iconMenu && iconClose) {
-                iconMenu.style.display = "block";
-                iconClose.style.display = "none";
-            }
-        });
+        link.addEventListener("click", closeDrawer);
+    });
+
+    // Close when clicking outside drawer
+    document.addEventListener("click", (e) => {
+        if (drawer.classList.contains("is-open") && !drawer.contains(e.target) && !menuBtn.contains(e.target)) {
+            closeDrawer();
+        }
+    });
+
+    // Close on Escape key
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && drawer.classList.contains("is-open")) {
+            closeDrawer();
+            menuBtn.focus();
+        }
     });
 }
